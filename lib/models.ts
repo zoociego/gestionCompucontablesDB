@@ -6,7 +6,7 @@ import {
   userSchema,
   invoiceSchema,
   serviceSchema,
-} from './schemas.js'
+} from './schemas'
 
 export const CompanyModel = model('Company', companySchema)
 export const LegalRepModel = model('LegalRep', legalRepSchema)

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceModel = exports.InvoiceModel = exports.UserModel = exports.BAModel = exports.LegalRepModel = exports.CompanyModel = void 0;
+const mongoose_1 = require("mongoose");
+const schemas_js_1 = require("./schemas.js");
+exports.CompanyModel = (0, mongoose_1.model)('Company', schemas_js_1.companySchema);
+exports.LegalRepModel = (0, mongoose_1.model)('LegalRep', schemas_js_1.legalRepSchema);
+exports.BAModel = (0, mongoose_1.model)('BankAccount', schemas_js_1.BASchema);
+exports.UserModel = (0, mongoose_1.model)('User', schemas_js_1.userSchema);
+exports.InvoiceModel = (0, mongoose_1.model)('Invoice', schemas_js_1.invoiceSchema);
+exports.ServiceModel = (0, mongoose_1.model)('Service', schemas_js_1.serviceSchema);

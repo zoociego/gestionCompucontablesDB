@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 dotenv.config()
-const uri = process.env.MONGO_DB_URI
+export const uri = process.env.MONGO_DB_URI || 'no valid uri'
 // MongoDB connection
 export const connectWithMongoose = () => {
   mongoose
@@ -10,6 +10,7 @@ export const connectWithMongoose = () => {
       console.log('DB is connected')
     })
     .catch((err) => {
-      console.error(err)
+      console.error(err)      
     })
 }
+connectWithMongoose()

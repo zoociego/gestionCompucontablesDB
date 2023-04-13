@@ -1,7 +1,13 @@
 import mongoose from 'mongoose'
-import { ServiceModel, CompanyModel } from '../lib/models.js'
+import { ServiceModel, CompanyModel } from '../lib/models'
+import { Services } from '../lib/enum/mongo.enum'
 
-export const newService = (name, type, price, companyId) => {
+export const newService = (
+  name: string, 
+  type: Services, 
+  price: number, 
+  companyId: string
+) => {
   const Service = new ServiceModel({
     DATE: new Date(),
     NAME: name,
@@ -22,14 +28,14 @@ export const newService = (name, type, price, companyId) => {
 }
 
 export const newCompany = (
-  name,
-  rut,
-  businessActivity,
-  email,
-  phone,
-  siiPassword,
-  previredUser,
-  previredPassword
+  name: string,
+  rut: string,
+  businessActivity: string,
+  email: string,
+  phone: string,
+  siiPassword: string,
+  previredUser: string,
+  previredPassword: string
 ) => {
   const Company = new CompanyModel({
     CREATED_AT: new Date(),
