@@ -1,6 +1,6 @@
 import './mongo'
 import { ApolloServer } from 'apollo-server'
-import { typeDefs } from '../utils/typeDefinitions.gql'
+import { typeDefs } from '../lib/typeDefinitions.gql'
 import  { resolvers } from '../utils/resolvers.gql'
 
 const server = new ApolloServer({

@@ -1,16 +1,6 @@
-import {
-    CompanyModel,
-    ServiceModel,
-} from '../lib/models'
-
+import Query from './query.gql'
+import { Mutation } from './mutation.gql'
 export const resolvers = {
-    Query: {
-      company: async () => {
-        const companies = await CompanyModel.find()
-        return companies/* .clone().exec() */
-      },
-      service: () => {
-        return ServiceModel.find()/* .clone().exec() */
-      }
-    }
+    Query,
+    Mutation,
   }

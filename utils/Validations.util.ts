@@ -1,3 +1,1 @@
-export const rutRegex = /^(\d{1,3}(\d{3})*)-?([\dkK])$/
-
-console.log(rutRegex.test('12345678-9'))
+export const rutRegex = /^\d{7,8}-[0-9Kk]$/

@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import { ServiceModel, CompanyModel } from '../lib/models'
-import { Services } from '../lib/enum/mongo.enum'
+import { Services } from '../lib/mongo.enum'
 
 export const newService = (
   name: string, 
