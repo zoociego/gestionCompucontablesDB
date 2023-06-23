@@ -103,6 +103,7 @@ export const invoiceSchema = new Schema({
 export const companySchema = new Schema({
   NAME: StringForSchemas,
   RUT: StringForSchemas,
+  ALIAS: StringForSchemas,
   BUSINESS_ACTIVITY: StringForSchemas,
   EMAIL: StringForSchemas,
   PHONE: StringForSchemas,

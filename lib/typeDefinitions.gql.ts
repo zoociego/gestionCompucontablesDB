@@ -29,8 +29,8 @@
         PAGE: Int!, 
         LIMIT: Int!, 
         SORT: String!,
-        QUERY_PARAMS: String
-      ): [Company]! 
+        valueQueryParam: String
+      ): Companies! 
       FindCompanyServicesProvided(
         COMPANY: String!
       ): [Invoice]!
@@ -43,6 +43,7 @@
     }
     type Company {
       NAME: String!,
+      ALIAS: String!,
       RUT: String!,
       BUSINESS_ACTIVITY: String!,
       EMAIL: String!,
@@ -54,6 +55,10 @@
       INVOICES_PROVIDED: [String],
       LEGAL_REPRESENTATIVE: [String],
       BANK_ACCOUNTS: [String]
+    }
+    type Companies {
+      results: [Company]!,
+      total: Int!
     }
     type LegalRep {
       NAME: String!,
@@ -96,6 +101,7 @@
       addCompany(
         NAME: String!,
         RUT: String!,
+        ALIAS: String!,
         BUSINESS_ACTIVITY: String!,
         EMAIL: String!,
         PHONE: String!,

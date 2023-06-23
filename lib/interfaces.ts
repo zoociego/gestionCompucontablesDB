@@ -9,6 +9,7 @@ import {
 
 export interface ICompany {
   NAME: String,
+  ALIAS: String, 
   RUT: String,
   BUSINESS_ACTIVITY: String,
   EMAIL: String,
@@ -19,6 +20,7 @@ export interface ICompany {
   SERVICES_PROVIDED?: Array<String>,
   LEGAL_REPRESENTATIVE?: Array<String>,
   BANK_ACCOUNTS?: Array<String>
+  createAt?: Date,
 }
 
 export interface IInvoice {
@@ -69,5 +71,5 @@ export interface IPagination {
   LIMIT: number,
   SORT: string,
   TYPE: string,
-  QUERYPARAMS?: any,
+  valueQueryParam?: String,
 }

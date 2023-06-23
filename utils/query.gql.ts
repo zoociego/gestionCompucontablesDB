@@ -10,9 +10,12 @@ import { IPagination } from '../lib/interfaces'
 
 const Query = {
     Companies: async (_root: any, args: IPagination) => {
-      const { PAGE, LIMIT, SORT } = args
-      const companies = await paginations(PAGE, LIMIT, SORT, Company)
-      return companies.results
+      const { PAGE, LIMIT, SORT, valueQueryParam } = args
+      const companies = await paginations(PAGE, LIMIT, SORT, Company, valueQueryParam)
+      return {
+        results: companies.results,
+        total: companies.pagination.totalDocs
+      }
     },
     Invoices: async (_root: any, args: IPagination) => {
       const { PAGE, LIMIT, SORT } = args
